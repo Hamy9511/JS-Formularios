@@ -1,4 +1,18 @@
-const inputNacimiento = document.querySelector("#birth"); // 1 Seleecionamos el id del elemento donde estara la fecha
+//PARA REUTILIZAR CODIGO
+export function valida(input){ //Funcion para recibir inputs y va estaer vinculado con el archivo app.js
+    const tipoDeInput = input.dataset.tipo; //obtenemos la conexion de todos los datas y el "tipo" es el data attributes
+    //Ademas cuabdo del archivo app.js mande el input a la funcion valida, esta funcion reconocera si es del input data-tipo
+    if(validadores[tipoDeInput]){ //Verofocar si en validadores existe un tipo de input
+        validadores[tipoDeInput](input);
+    }
+}
+
+const validadores = { //funcion que va a recibir el valor del elemmento data attributtes "Nacimiento"
+    nacimiento: input => validarNacimiento(input), 
+};
+
+//------------------------------------------------------------------------------------------------------------------------------------
+//const inputNacimiento = document.querySelector("#birth"); // 1 Seleecionamos el id del elemento donde estara la fecha
 
 inputNacimiento.addEventListener("blur", (evento) => { //Creamos un listener tipo blur(cuando ya no este selecionado) 
     validarNacimiento(evento.target); //La accion sera un evento donde se va a capturar el elemnto input y lo manda a la funcion
