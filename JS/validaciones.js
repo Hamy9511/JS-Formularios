@@ -14,12 +14,12 @@ const validadores = { //funcion que va a recibir el valor del elemmento data att
 //------------------------------------------------------------------------------------------------------------------------------------
 //const inputNacimiento = document.querySelector("#birth"); // 1 Seleecionamos el id del elemento donde estara la fecha
 
-inputNacimiento.addEventListener("blur", (evento) => { //Creamos un listener tipo blur(cuando ya no este selecionado) 
-    validarNacimiento(evento.target); //La accion sera un evento donde se va a capturar el elemnto input y lo manda a la funcion
+    //inputNacimiento.addEventListener("blur", (evento) => { //Creamos un listener tipo blur(cuando ya no este selecionado) 
+    //validarNacimiento(evento.target); //La accion sera un evento donde se va a capturar el elemnto input y lo manda a la funcion
    // console.log(event.target);
-})
+//})
 
-function validarNacimiento(input){ // Validamos si el cleinte es mayor de edad
+function validarNacimiento(input){ // Validamos si el cleinaddte es mayor de edad
     const fechaCliente = new Date (input.value); //convertimos el elemento captura en unicament euna fecha
     //console.log(input.value);
     let mensaje = ""; //Emitimos un mensaje en blanco que estara siempre  hasta que se cumpla la siguiente condicion
