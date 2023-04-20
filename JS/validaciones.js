@@ -29,11 +29,29 @@ export function valida(input){ //Funcion para recibir inputs y va estaer vincula
         
         password: {
             valueMissing: "EL CAMPO PASSWORD NO PUEDE ESTAR VACIO",
-            patternMissmatch: "Al menos una letra y un número" //Caudno no cumple el pattern de la contraseña
+            patternMismatch: "Al menos una letra y un número" //Caudno no cumple el pattern de la contraseña
         },
         nacimiento: {
             valueMissing: "EL CAMPO FECHA NO PUEDE ESTAR VACIO",
             customError: "DEBES DE TENER 18 AÑOS" //Cuando valida que no tenes 18 años.
+        },
+
+        numero: {
+            valueMissing: "ESTE CAMMPO NO PUEDE ESTAR VACIO",
+            patternMismatch: "EL FORMATO REQUERIDO ES XXXXXXXXX 10 Números"
+        },
+
+        direccion: {
+            valueMissing: "ESTE CAMMPO NO PUEDE ESTAR VACIO",
+            patternMismatch: "TIENE QUE AGREGAR LA DIRECCION"
+        },
+        ciudad: {
+            valueMissing: "ESTE CAMMPO NO PUEDE ESTAR VACIO",
+            patternMismatch: "TIENE QUE AGREGAR LA CIUDAD"
+        },
+        estado: {
+            valueMissing: "ESTE CAMMPO NO PUEDE ESTAR VACIO",
+            patternMismatch: "TIENE QUE AGREGAR EL ESTADO"
         },
     };
 
